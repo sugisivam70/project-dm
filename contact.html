@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chandantechnology</title>
+    <link rel="icon" href="logo/CHANDAN TECHNOLOGY.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .service-hero-content h2 span.letter,
+    .service-hero-content h1 span.letter {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+      display: inline-block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-hero {
+      background-image: url(img/10506876.jpg);
+      background-size: cover;
+
+      object-fit: contain;
+      background-position: center;
+      padding: 100px 30px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: left;
+    }
+
+    .service-hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero-content h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .service-hero-content h2 span {
+      font-weight: 700;
+      color: #ffdd00;
+    }
+
+    .bg-text {
+      font-size: 100px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+      bottom: 30px;
+      left: 30px;
+      color: #0f67f4;
+    }
+    @media (max-width: 446px) {
+      .service-hero-content h2 {
+        font-size: 28px;
+      }
+      .bg-text {
+        font-size: 60px;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      font-family: "poppins", sans-serif;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero .highlight {
+      color: #1e73e8;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #1e73e8;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #125bb5;
+    }
+
+    .btn.secondary {
+      background: #f4f4f4;
+      color: #333;
+      border: 1px solid #ddd;
+    }
+
+    .btn.secondary:hover {
+      background: #e6e6e6;
+    }
+
+    /* Rating */
+    .rating {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .rating p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .rating a {
+      color: #1e73e8;
+      text-decoration: none;
+    }
+
+    /* Stats Section */
+    .hero-stats {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      font-family: "poppins", sans-serif;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .stat {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .stat h2 {
+      font-size: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .stat p {
+      font-size: 0.95rem;
+      color: #000000;
+    }
+
+    /* Color Variations */
+    .stat.blue {
+      background: #000000;
+      color: #ffffff;
+      font-size: 2rem;
+    }
+    .stat.blue p {
+      color: #d4d4d4;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .stat.blue h2 {
+      color: #1f61f0;
+      font-size: 2rem;
+    }
+
+    .stat.green {
+      background: #f0fdf4;
+      color: #111;
+      border: 1px solid #cce8d8;
+    }
+
+    .stat.lightgreen {
+      background: #d9f99d;
+      color: #111;
+    }
+
+    /* machines */
+
+    .machine-sec {
+      padding: 60px 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .machine-sec h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .machine-sec h2 span {
+      color: #e60012; /* Red Plus */
+      margin-left: 10px;
+    }
+
+    /* Grid Layout */
+    .machine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Machine Cards */
+    .machine-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .machine-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .machine-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    /* Wide cards (side by side image + text) */
+    .machine-card.wide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      grid-column: span 2;
+    }
+
+    .machine-card.wide .machine-info {
+      flex: 1;
+    }
+
+    .machine-card.wide .machine-img {
+      flex: 1;
+    }
+
+    .machine-card.wide img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .machine-card ul {
+      list-style: disc;
+      margin: 0 0 15px 20px;
+      text-align: left;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    /* Explore Button */
+    .explore-btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #7e7e7e;
+    }
+
+    .work-section {
+      margin-top: 2rem;
+      padding-bottom: 60px;
+    }
+    .work-header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .work-header h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .work-header h2 span {
+      color: #3fa9f5;
+    }
+
+    .work-header p {
+      font-size: 1rem;
+      color: #525252;
+      margin-top: 10px;
+    }
+
+    /* Grid */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 250px;
+      gap: 20px;
+      padding: 20px 60px 60px;
+    }
+
+    /* Card */
+    .work-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .work-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.7);
+    }
+
+    /* Info */
+    .work-info {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .work-info h3 {
+      font-size: 1.1rem;
+      margin: 5px 0 0;
+      color: #ffffff;
+    }
+    .tag {
+      color: #fff;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      background: rgba(0, 149, 255, 0.8);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    /* CTA button */
+    .cta-btn {
+      background: #0095ff;
+      border: none;
+      padding: 12px 20px;
+      color: #fff;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #2a7fb6;
+    }
+
+    /* Special card sizing */
+    .large {
+      grid-row: span 2;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .wide {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      .large {
+        grid-row: span 1;
+      }
+    }
+
+    /* Enquiry Section */
+    .enquiry-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      font-family: "poppins", sans-serif;
+    }
+
+    .enquiry-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .enquiry-left {
+      position: relative;
+    }
+
+    .contact-image {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-height: 400px;
+      object-fit: contain;
+    }
+
+    .contact-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .contact-overlay h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 20px;
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .contact-icons i {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .contact-icons i:hover {
+      background: rgba(255, 217, 0, 0.3);
+      transform: scale(1.1);
+    }
+
+    .enquiry-right {
+      padding: 40px;
+      background: #f9f9f9;
+      border-radius: 12px;
+    }
+
+    .enquiry-right h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 5px;
+    }
+
+    .enquiry-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+
+    .enquiry-form {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: "poppins", sans-serif;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      font-family: "poppins", sans-serif;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px 20px;
+      background: #ff8c00;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: "poppins", sans-serif;
+    }
+
+    .submit-btn:hover {
+      background: #e67e00;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+
+    .info-link {
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s;
+    }
+
+    .info-link i {
+      color: #ff8c00;
+    }
+
+    .info-link:hover {
+      color: #ff8c00;
+      transform: translateX(5px);
+    }
+
+    /* Map Section */
+    .map-section {
+      padding: 60px 20px;
+      background: #f5f5f5;
+    }
+
+    .map-container {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+      border: none;
+    }
+
+    .address-info {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .address-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .address-box h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 15px;
+    }
+
+    .address-box p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.8;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .address-box i {
+      color: #ff8c00;
+      font-size: 1.2rem;
+      margin-top: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .enquiry-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .enquiry-right {
+        padding: 30px;
+      }
+
+      .enquiry-right h2 {
+        font-size: 1.5rem;
+      }
+
+      .contact-image img {
+        min-height: 300px;
+      }
+
+      .map-container iframe {
+        height: 350px !important;
+      }
+
+      .address-box {
+        padding: 20px;
+      }
+    }
+  </style>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="machines.html">Machine's</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/8123638613?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>For <br /><span></span></h2>
+        <h1 class="bg-text">Contact</h1>
+      </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section class="enquiry-section">
+      <div class="enquiry-container">
+        <!-- Left Side - Contact Image & Info -->
+        <div class="enquiry-left">
+          <div class="contact-image">
+            <img
+              src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+              alt="DM Technologies"
+            />
+            <div class="contact-overlay">
+              <h3>CONTACT US</h3>
+              <div class="contact-icons">
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-cogs"></i>
+                <i class="fas fa-industry"></i>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-phone"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Form -->
+        <div class="enquiry-right">
+          <h2>Contact DM Technologies</h2>
+          <p class="enquiry-subtitle">Call us or send your machining enquiry</p>
+
+          <form class="enquiry-form" id="enquiryForm">
+            <div class="form-group">
+              <input type="text" placeholder="Name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <input type="email" placeholder="Email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <input type="tel" placeholder="Phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <textarea
+                placeholder="Your enquiry (component, material, quantity, etc.)"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Enquiry</button>
+          </form>
+
+          <div class="contact-info">
+            <a href="mailto:admin@dm-technologies.in" class="info-link">
+              <i class="fas fa-envelope"></i>
+              admin@dm-technologies.in
+            </a>
+
+            <a href="tel:+918296223386" class="info-link">
+              <i class="fas fa-phone"></i>
+              +91 82962 23386
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="map-container">
+        <iframe
+          title="DM Technologies Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.948221155735!2d77.5128057!3d13.0064149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d002bf0642b%3A0x35ebb0b2212893b7!2sDM%20TECHNOLOGIES!5e0!3m2!1sen!2sin!4v1710000000000"
+          width="100%"
+          height="500"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="contact-map"
+        ></iframe>
+      </div>
+
+      <div class="address-info">
+        <div class="address-box">
+          <h3>Our Location</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            DM Technologies, Plot V-60, 2nd Stage, Kalika Nagar, Peenya,
+            Bengaluru, Karnataka – 560058
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+            alt="DM Technologies Logo"
+            class="logo"
+          />
+          <p>
+            DM Technologies is a precision-driven VMC machining and CNC job work
+            company delivering accurate, reliable, and high-quality machined
+            components for OEMs and engineering industries.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">VMC Machining</a></li>
+            <li><a href="services.html">CNC Job Work</a></li>
+            <li><a href="machines.html">Machines</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Policy</a></li>
+            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" title="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" title="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20am%20interested%20in%20your%20VMC%20and%20CNC%20machining%20services."
+              title="Chat on WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
+              Bengaluru – 560058
+            </a>
+          </p>
+
+          <p>
+            <a href="tel:+918296223386">
+              <i class="fas fa-phone-alt"></i> +91 82962 23386
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20would%20like%20to%20enquire%20about%20your%20machining%20services."
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="mailto:admin@dm-technologies.in?subject=Warm%20Enquiry%20-%20CNC%20Machining%20Services&body=Hello%20DM%20Technologies,%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AI%20would%20like%20to%20enquire%20about%20your%20VMC%20and%20CNC%20machining%20services.%20Please%20share%20details%20regarding%20capabilities,%20lead%20time,%20and%20quotation%20process.%0A%0ALooking%20forward%20to%20your%20response.%0A%0ARegards,%0A[Your%20Name]"
+            >
+              <i class="fas fa-envelope"></i> admin@dm-technologies.in
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. DM Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Service Hero h2 animation
+        const serviceHeroH2 = document.querySelector(
+          ".service-hero-content h2",
+        );
+        if (serviceHeroH2) {
+          // Split text into spans if not already done
+          if (!serviceHeroH2.querySelector("span.letter")) {
+            const html = serviceHeroH2.innerHTML;
+            // Split by <br> and animate each line
+            serviceHeroH2.innerHTML = "";
+            html.split("<br>").forEach((line, lineIdx) => {
+              if (lineIdx > 0)
+                serviceHeroH2.appendChild(document.createElement("br"));
+              line
+                .replace(/<[^>]+>/g, "")
+                .split("")
+                .forEach((char, i) => {
+                  const span = document.createElement("span");
+                  span.className = "letter";
+                  span.textContent = char === " " ? "\u00A0" : char;
+                  serviceHeroH2.appendChild(span);
+                });
+            });
+          }
+          serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH2 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH2
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH2.observe(serviceHeroH2);
+        }
+
+        // Service Hero h1 animation
+        const serviceHeroH1 = document.querySelector(
+          ".service-hero-content h1",
+        );
+        if (serviceHeroH1) {
+          if (!serviceHeroH1.querySelector("span.letter")) {
+            const text = serviceHeroH1.textContent;
+            serviceHeroH1.innerHTML = "";
+            text.split("").forEach((char) => {
+              const span = document.createElement("span");
+              span.className = "letter";
+              span.textContent = char === " " ? "\u00A0" : char;
+              serviceHeroH1.appendChild(span);
+            });
+          }
+          serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH1 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH1
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH1.observe(serviceHeroH1);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      // ...existing code...
+
+      // Count animation for hero-stats numbers
+      document.addEventListener("DOMContentLoaded", function () {
+        function animateCount(el, target, duration = 1200) {
+          let start = 0;
+          let startTime = null;
+          target = parseInt(target, 10);
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            const progress = Math.min((ts - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * (target - start) + start);
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        // Animate all .stat h2 numbers when .hero-stats enters viewport
+        const statsSection = document.querySelector(".hero-stats");
+        if (statsSection) {
+          const observer = new IntersectionObserver(
+            function (entries) {
+              if (entries[0].isIntersecting) {
+                statsSection
+                  .querySelectorAll(".stat h2")
+                  .forEach(function (h2) {
+                    const target = h2.textContent.replace(/\D/g, "");
+                    if (target) animateCount(h2, target);
+                  });
+                observer.disconnect();
+              }
+            },
+            { threshold: 0.3 },
+          );
+          observer.observe(statsSection);
+        }
+      });
+
+      // ...existing code...
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const enquiryForm = document.getElementById("enquiryForm");
+
+        if (enquiryForm) {
+          enquiryForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            const phone = formData.get("phone");
+            const message = formData.get("message");
+
+            const subject = `Warm Enquiry - DM Technologies (${name})`;
+
+            const body = `Hello DM Technologies,
+
+I would like to enquire about your VMC / CNC machining services.
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+Enquiry:
+${message}
+
+Regards,
+${name}`;
+
+            window.location.href = `mailto:admin@dm-technologies.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            alert(
+              "Thank you for your enquiry. Your email client will open now.",
+            );
+
+            this.reset();
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

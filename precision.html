@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Precision</title>
+    <link rel="icon" href="img/logo/Screenshot 2025-09-24 103228.png" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <style>
+    .service-hero-content h2 span.letter,
+    .service-hero-content h1 span.letter {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+      display: inline-block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-hero {
+      background-image: url(img/TaeApril20.jpg);
+      background-size: cover;
+      background-position: center;
+      padding: 100px 30px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: left;
+    }
+
+    .service-hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero-content h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .service-hero-content h2 span {
+      font-weight: 700;
+      color: #00a2ff;
+    }
+
+    .bg-text {
+      font-size: 50px;
+      font-weight: 700;
+
+      margin: 0;
+      line-height: 1;
+      bottom: 30px;
+      left: 30px;
+      color: #021b5d;
+    }
+
+    /* Add this to your style block or style.css */
+
+    /* Fade-left animation for service-hero section */
+    @keyframes fadeLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .service-hero {
+      opacity: 0;
+      transform: translateX(-40px);
+      animation: none;
+    }
+
+    /* Fade-up animation for service section */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .services {
+      opacity: 0;
+      transform: translateY(32px);
+      animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+      animation-delay: 1.8s;
+    }
+
+    /* Fade-up animation for service section */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .services {
+      opacity: 0;
+      transform: translateY(32px);
+      animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+      animation-delay: 0.2s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .precision-page {
+      padding: 60px 40px;
+      background: #f7f9fc;
+    }
+
+    .precision-container {
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .precision-title {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .precision-title::before {
+      content: "";
+      position: absolute;
+      left: -15px;
+      top: 0;
+      width: 5px;
+      height: 100%;
+      background: #6a1b9a;
+    }
+
+    .precision-layout {
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    /* Table */
+    .precision-table table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .precision-table th,
+    .precision-table td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+
+    .precision-table th {
+      background: #f1f3f6;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .precision-table td {
+      text-align: center;
+    }
+
+    .precision-table td:nth-child(2) {
+      text-align: left;
+    }
+
+    /* Image */
+    .precision-image {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .precision-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .precision-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Precision page mobile optimization (350px–400px) */
+    @media (max-width: 400px) {
+      .precision-page {
+        padding: 30px 15px;
+      }
+
+      .precision-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .precision-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      /* Make table horizontally scrollable (BEST PRACTICE) */
+      .precision-table {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .precision-table table {
+        min-width: 650px; /* ensures columns don’t squash */
+        font-size: 12px;
+      }
+
+      .precision-table th,
+      .precision-table td {
+        padding: 8px 6px;
+        font-size: 11px;
+        white-space: nowrap;
+      }
+
+      .precision-table th {
+        font-size: 11px;
+      }
+
+      /* Right-side image */
+      .precision-image {
+        padding: 12px;
+      }
+
+      .precision-image img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="machines.html">Machine's</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/8123638613?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>We provide <br /><span>Best Quality</span></h2>
+        <h1 class="bg-text">Precision</h1>
+      </div>
+    </section>
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Precision | List of Instruments</title>
+        <link rel="stylesheet" href="precision.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <section class="precision-page">
+          <div class="precision-container">
+            <h1 class="precision-title">LIST OF INSTRUMENTS</h1>
+
+            <div class="precision-layout">
+              <!-- Table -->
+              <div class="precision-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>SL. NO</th>
+                      <th>NAME OF INSTRUMENTS</th>
+                      <th>NO. OF INSTRUMENTS</th>
+                      <th>TYPE OF INSTRUMENTS</th>
+                      <th>COMPANY MAKE</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Digital Vernier</td>
+                      <td>1 Nos</td>
+                      <td>0–150 mm / 0.01</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Outside Micrometer</td>
+                      <td>6 Nos</td>
+                      <td>0–150 mm</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Digimatic Micrometer</td>
+                      <td>6 Nos</td>
+                      <td>0–150 mm</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Bore Gauge (Without Dial)</td>
+                      <td>4 Nos</td>
+                      <td>10–150 mm</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Dial Indicator</td>
+                      <td>2 Nos</td>
+                      <td>0–10 / 0.01</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Digital Depth Vernier</td>
+                      <td>2 Nos</td>
+                      <td>0–150 mm</td>
+                      <td>Insize</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Zero Setter Dial Stand</td>
+                      <td>3 Nos</td>
+                      <td>—</td>
+                      <td>Insize</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Flexible Dial Stand</td>
+                      <td>2 Nos</td>
+                      <td>—</td>
+                      <td>Insize</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Dial Test Indicator</td>
+                      <td>1 Nos</td>
+                      <td>0–0.8 / 0.01</td>
+                      <td>Mitutoyo</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Surface Table</td>
+                      <td>2 Nos</td>
+                      <td>630×630 / 1000×1000</td>
+                      <td>Indian</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Automatic 2D Height Gauge</td>
+                      <td>1 Nos</td>
+                      <td>M1000</td>
+                      <td>Electronica</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Right Image -->
+              <div class="precision-image">
+                <img
+                  src="precision/ultima-m-1000-1380-blue_colonne-de-mesure-1d-2d-motorisee-someco-electronica-300x300.jpg"
+                  alt="Precision Instruments"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+    </html>
+
+    <section class="services">
+      <h2>Custom CNC Machining Solutions</h2>
+      <p>
+        From prototype components to production quantities, DM Technologies
+        provides reliable VMC machining and CNC job work solutions tailored to
+        customer drawings and specifications.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <img src="img/abt/CNC-Machine.jpg" alt="CNC Machining" />
+          <h3>CNC Machining</h3>
+          <p>
+            Precision CNC machining for complex components in ferrous and
+            non-ferrous materials with consistent dimensional accuracy.
+          </p>
+          <a href="services.html">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="img/abt/istockphoto-154368811-612x612.jpg"
+            alt="VMC Machining"
+          />
+          <h3>VMC Machining</h3>
+          <p>
+            High-precision VMC job work for parts requiring tight tolerances and
+            good surface finish.
+          </p>
+          <a href="services.html">Learn More →</a>
+        </div>
+
+        <div class="card">
+          <img
+            src="img/close-up-scene-progressive-die-operation-metal-work-processing-stamping-die-close-up-scene-progressive-die-operation-215348292.webp"
+            alt="Custom Machining"
+          />
+          <h3>Custom Machining</h3>
+          <p>
+            Machining solutions executed strictly as per customer drawings,
+            specifications, and delivery requirements.
+          </p>
+          <a href="services.html">Learn More →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-details">
+      <div class="section-header">
+        <span class="tag">Manufacturing</span>
+        <h2>The Common <span>Components</span> We Machine</h2>
+      </div>
+
+      <div class="details-grid">
+        <!-- Card 1 -->
+        <div class="detail-card">
+          <img
+            src="img/mild-steel-cast-iron-welding-silver-colour-size-customized-hardness-70-hrc-application-industrial-jig-fixture-947.jpg"
+            alt="Machined Fixtures"
+          />
+          <h3>Machined Fixtures</h3>
+          <ul>
+            <li><strong>Material:</strong> Mild Steel, Alloy Steel</li>
+            <li><strong>Application:</strong> Holding & positioning</li>
+            <li><strong>Process:</strong> VMC machining</li>
+            <li><strong>Finish:</strong> Machined / Ground</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="detail-card">
+          <img src="img/Industrial-Mould-Bore-Plates.jpg" alt="Base Plates" />
+          <h3>Base Plates</h3>
+          <ul>
+            <li><strong>Material:</strong> Mild Steel, Cast Iron</li>
+            <li><strong>Application:</strong> Machine mounting</li>
+            <li><strong>Surface:</strong> Milled</li>
+            <li><strong>Customization:</strong> As per drawing</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="detail-card">
+          <img src="img/Picture1.png" alt="Precision Blocks" />
+          <h3>Precision Blocks</h3>
+          <ul>
+            <li><strong>Material:</strong> Alloy Steel</li>
+            <li><strong>Application:</strong> Alignment & spacing</li>
+            <li><strong>Machining:</strong> VMC / CNC</li>
+            <li><strong>Finish:</strong> Machined</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="detail-card">
+          <img src="img/Picture2.png" alt="Shaft Components" />
+          <h3>Shaft Components</h3>
+          <ul>
+            <li><strong>Material:</strong> Mild Steel, Stainless Steel</li>
+            <li><strong>Application:</strong> Rotational assemblies</li>
+            <li><strong>Process:</strong> CNC machining</li>
+            <li><strong>Finish:</strong> Machined / Polished</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="detail-card">
+          <img src="img/Picture5.png" alt="Housings" />
+          <h3>Machined Housings</h3>
+          <ul>
+            <li><strong>Material:</strong> Aluminum, Cast Iron</li>
+            <li><strong>Application:</strong> Mechanical assemblies</li>
+            <li><strong>Process:</strong> VMC machining</li>
+            <li><strong>Finish:</strong> CNC machined</li>
+          </ul>
+        </div>
+
+        <!-- Info Card -->
+        <div class="upload-card">
+          <div class="upload-box">
+            <h3>Custom Machining Support</h3>
+            <p>
+              Components are machined strictly as per customer drawings,
+              specifications, and delivery requirements.
+            </p>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="img/logo/Screenshot 2025-09-24 103609.png"
+            alt="Genius Tech Logo"
+            class="logo"
+          />
+          <p>
+            Genius Technology specializes in high-precision VMC milling, and
+            press tool and Mold solutions. Delivering innovation, accuracy, and
+            reliability for global manufacturing industries.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">Vmc & Wirecut Molding</a></li>
+            <li><a href="precision.html">Press & Moldtools Making </a></li>
+            <li><a href="precision.html">Tool Room Activities</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Get a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">FAQs</a></li>
+            <li><a href="contact.html">Quality Policy</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a
+              href="https://in.linkedin.com/in/abdul-lashkari-8798a7129?utm_source=share&utm_medium=member_mweb&utm_campaign=share_via&utm_content=profile"
+              title="LinkedIn target="
+              _blank
+              rel="noopener"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/share/1JmvB4UV7W/"
+              title="Facebook  target="
+              _blank
+              rel="noopener    "
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/genius.technology_?igsh=MTd4c3Y5YzJkZmF1Mg=="
+              title="Instagram target="
+              _blank
+              rel="noopener"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://wa.me/8123638613?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details? target="
+              _blank
+              rel="noopener"
+              title="WhatsApp"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://www.google.com/maps/place/genius+technologies/@13.0064202,77.4947271,808m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae3d001422d6f5:0x357eb3ad3a09bf37!8m2!3d13.006415!4d77.497302!16s%2Fg%2F11y013t21p?authuser=0&entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Genius-technology 195, Andrahalli Main Rd, Peenya 2nd Stage,
+              Shushruti Nagar, Bengaluru, Karnataka 560091
+            </a>
+                      
+          </p>
+          <p>
+            <a href="tel:+81236 38613">
+              <i class="fas fa-phone-alt"></i> +91 +91 81236 38613
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=admin@genius-technology.co.in&su=Product%20Enquiry%20from%20Website&body=Hello%20Genius%20Tech%2C%0A%0AI%20am%20interested%20in%20your%20products.%20Please%20share%20more%20details%20with%20me.%0A%0ARegards%2C%0A[Your%20Name] "
+              rel="noopener"
+              target="_blank"
+            >
+              <i class="fas fa-envelope"></i> admin@genius-technology.co.in
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. Genius Tech CNC. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Service Hero h2 animation
+        const serviceHeroH2 = document.querySelector(
+          ".service-hero-content h2",
+        );
+        if (serviceHeroH2) {
+          // Split text into spans if not already done
+          if (!serviceHeroH2.querySelector("span.letter")) {
+            const html = serviceHeroH2.innerHTML;
+            // Split by <br> and animate each line
+            serviceHeroH2.innerHTML = "";
+            html.split("<br>").forEach((line, lineIdx) => {
+              if (lineIdx > 0)
+                serviceHeroH2.appendChild(document.createElement("br"));
+              line
+                .replace(/<[^>]+>/g, "")
+                .split("")
+                .forEach((char, i) => {
+                  const span = document.createElement("span");
+                  span.className = "letter";
+                  span.textContent = char === " " ? "\u00A0" : char;
+                  serviceHeroH2.appendChild(span);
+                });
+            });
+          }
+          serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH2 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH2
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH2.observe(serviceHeroH2);
+        }
+
+        // Service Hero h1 animation
+        const serviceHeroH1 = document.querySelector(
+          ".service-hero-content h1",
+        );
+        if (serviceHeroH1) {
+          if (!serviceHeroH1.querySelector("span.letter")) {
+            const text = serviceHeroH1.textContent;
+            serviceHeroH1.innerHTML = "";
+            text.split("").forEach((char) => {
+              const span = document.createElement("span");
+              span.className = "letter";
+              span.textContent = char === " " ? "\u00A0" : char;
+              serviceHeroH1.appendChild(span);
+            });
+          }
+          serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH1 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH1
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH1.observe(serviceHeroH1);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const servicesSection = document.querySelector(".services");
+        if (!servicesSection) return;
+        servicesSection.style.opacity = 0;
+        servicesSection.style.transform = "translateY(32px)";
+        const observer = new IntersectionObserver(
+          function (entries) {
+            if (entries[0].isIntersecting) {
+              servicesSection.style.animation =
+                "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+              servicesSection.style.animationDelay = "0.2s";
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.3 },
+        );
+        observer.observe(servicesSection);
+      });
+
+      // Fade-left animation for service-hero section
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceHero = document.querySelector(".service-hero");
+        if (!serviceHero) return;
+        serviceHero.style.opacity = 0;
+        serviceHero.style.transform = "translateX(-40px)";
+        const observer = new IntersectionObserver(
+          function (entries) {
+            if (entries[0].isIntersecting) {
+              serviceHero.style.animation =
+                "fadeLeft 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+              serviceHero.style.animationDelay = "0.2s";
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.3 },
+        );
+        observer.observe(serviceHero);
+      });
+
+      // Fade-up animation for popular-details section
+      document.addEventListener("DOMContentLoaded", function () {
+        const popularDetails = document.querySelector(".popular-details");
+        if (!popularDetails) return;
+        popularDetails.style.opacity = 0;
+        popularDetails.style.transform = "translateY(32px)";
+        const observer = new IntersectionObserver(
+          function (entries) {
+            if (entries[0].isIntersecting) {
+              popularDetails.style.animation =
+                "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+              popularDetails.style.animationDelay = "0.2s";
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.3 },
+        );
+        observer.observe(popularDetails);
+      });
+    </script>
+  </body>
+</html>

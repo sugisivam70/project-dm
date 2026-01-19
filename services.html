@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service</title>
+    <link rel="icon" href="img/logo/Screenshot 2025-09-24 103228.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      .service-hero-content h2 span.letter,
+      .service-hero-content h1 span.letter {
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: fadeInUp 0.6s ease-out forwards;
+        display: inline-block;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .service-hero {
+        background-image: url(img/2534.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 100px 30px;
+        position: relative;
+        overflow: hidden;
+        color: #fff;
+        text-align: left;
+      }
+
+      .service-hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .service-hero-content h2 {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.4;
+      }
+
+      .service-hero-content h2 span {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .bg-text {
+        font-size: 100px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+        bottom: 30px;
+        left: 30px;
+        color: #000000;
+      }
+
+      /* Service Section */
+      .services {
+        padding: 20px 0;
+        background: #f9f9f9;
+        text-align: center;
+        font-family: "Poppins", Arial, sans-serif;
+        background-image: url(/img/nav-logo/ChatGPT\ Image\ Jul\ 9\,\ 2025\,\ 10_51_47\ PM.png);
+      }
+
+      .section-title {
+        font-size: 42px;
+        margin-bottom: 40px;
+      }
+
+      .section-title span {
+        color: #007bff;
+      }
+
+      .service-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .service-box {
+        background: #f7f9fc;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+        flex: 1 1 280px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .service-box i {
+        color: #007bff;
+        margin-bottom: 15px;
+      }
+
+      .service-box h4 {
+        margin: 15px 0 10px;
+      }
+      .service-box p {
+        font-size: 0.95rem;
+        color: #6f6f6f;
+      }
+
+      .service-box.active,
+      .service-box:hover {
+        background: black;
+        color: #ffffff;
+      }
+      .service-box:hover p {
+        color: #bdbdbd;
+      }
+
+      .service-box.active i,
+      .service-box:hover i {
+        color: #007bff;
+      }
+
+      /* Expertise Section */
+      .expertise {
+        padding: 30px 0;
+        text-align: center;
+        background: #fff;
+        background-image: url(/img/hero/img\ bg.png);
+        font-family: "Poppins", Arial, sans-serif;
+      }
+
+      .expertise-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .expert-box {
+        flex: 1 1 280px;
+      }
+
+      .expert-box img {
+        width: 100%;
+        border-radius: 10px;
+        height: 200px;
+        object-fit: contain;
+        margin-bottom: 15px;
+      }
+
+      .expert-box h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 10px 0;
+        color: #ff6b1a;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 48px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .service-hero-content h1 {
+          letter-spacing: -0.06em;
+        }
+
+        .service-box,
+        .expert-box {
+          flex: 1 1 100%;
+        }
+      }
+
+      /* Hide menu toggle by default */
+
+      /* Fade-up animation for service section */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .services {
+        opacity: 0;
+        transform: translateY(32px);
+        animation: fadeUp 0.8s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+        animation-delay: 0.2s;
+      }
+
+      /* Fade-up animation for feature section */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .features-section {
+        opacity: 0;
+        transform: translateY(32px);
+        animation: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="machines.html">Machine's</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/8123638613?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>We provide <br /><span>Best Quality</span></h2>
+        <h1 class="bg-text">Services</h1>
+      </div>
+    </section>
+
+    <!-- Service Offerings -->
+    <section class="services">
+      <div class="service-container">
+        <h2 class="section-title">Our <span>Service</span> Offering</h2>
+
+        <div class="service-grid">
+          <div class="service-box">
+            <i class="fas fa-file-alt fa-2x"></i>
+            <h4>Drawing Review</h4>
+            <p>
+              Understanding customer drawings, specifications, and material
+              requirements before machining.
+            </p>
+          </div>
+
+          <div class="service-box active">
+            <i class="fas fa-cogs fa-2x"></i>
+            <h4>VMC Machining</h4>
+            <p>
+              High-precision VMC machining for components requiring tight
+              tolerances and excellent surface finish.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-industry fa-2x"></i>
+            <h4>CNC Job Work</h4>
+            <p>
+              CNC machining support for prototype and production quantities as
+              per customer drawings.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-tools fa-2x"></i>
+            <h4>Custom Machining</h4>
+            <p>
+              Machining solutions developed strictly according to customer
+              specifications and tolerances.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-check-circle fa-2x"></i>
+            <h4>Quality Inspection</h4>
+            <p>
+              Dimensional inspection using precision measuring instruments to
+              ensure accuracy and consistency.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <i class="fas fa-clock fa-2x"></i>
+            <h4>On-Time Delivery</h4>
+            <p>
+              Planned execution with reliable delivery schedules and clear
+              customer communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features Section -->
+
+    <section class="features-section" id="feature">
+      <p class="section-label">Features</p>
+      <h2 class="section-title">
+        Stepping <span>Together</span> Towards the Success of
+        <span>Your Project</span>
+      </h2>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-ruler-combined"></i>
+          </div>
+          <h3>Precision Focus</h3>
+          <p>
+            Components are machined with close dimensional control to meet
+            customer drawing requirements.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Reliable Machining</h3>
+          <p>
+            Consistent machining processes ensure repeatability across prototype
+            and production quantities.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Quality Assurance</h3>
+          <p>
+            Inspection at every stage using calibrated measuring instruments for
+            reliable results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="features-header">
+        <div class="feature-heading">
+          <div>
+            <h2>Features That Support Your Machining Requirements</h2>
+          </div>
+          <div>
+            <p>
+              We focus on accuracy, consistency, and dependable delivery in
+              every VMC and CNC machining project.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-container">
+        <div class="feature-card">
+          <div class="icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Drawing-Based Execution</h3>
+          <p>
+            Machining is carried out strictly according to approved drawings and
+            specifications.
+          </p>
+          <a href="precision.html">Read more</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon"><i class="fas fa-cogs"></i></div>
+          <h3>VMC & CNC Capability</h3>
+          <p>
+            Modern VMC and CNC machines deliver accurate machining with good
+            surface finish.
+          </p>
+          <a href="precision.html">Read more</a>
+        </div>
+
+        <div class="feature-card">
+          <div class="icon"><i class="fas fa-truck"></i></div>
+          <h3>On-Time Delivery</h3>
+          <p>
+            Planned execution and clear coordination ensure reliable delivery
+            schedules.
+          </p>
+          <a href="Project.html">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Precision Machining</h3>
+          <p>
+            Components machined with close dimensional control to meet drawing
+            tolerances.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Customer Coordination</h3>
+          <p>
+            Clear communication with customers to understand specifications and
+            machining requirements.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">
+            <i class="fas fa-screwdriver-wrench"></i>
+          </div>
+          <h3>Flexible Machining</h3>
+          <p>
+            Machining support for different materials, part geometries, and
+            batch sizes.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+          <h3>Planned Execution</h3>
+          <p>
+            Machining activities planned to meet committed delivery schedules.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+          <h3>Quality Checks</h3>
+          <p>
+            In-process and final inspection using calibrated measuring
+            instruments.
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon"><i class="fas fa-truck"></i></div>
+          <h3>Reliable Delivery</h3>
+          <p>
+            Consistent on-time delivery with proper handling and documentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+     <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+            alt="DM Technologies Logo"
+            class="logo"
+          />
+          <p>
+            DM Technologies is a precision-driven VMC machining and CNC job work
+            company delivering accurate, reliable, and high-quality machined
+            components for OEMs and engineering industries.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">VMC Machining</a></li>
+            <li><a href="services.html">CNC Job Work</a></li>
+            <li><a href="machines.html">Machines</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Policy</a></li>
+            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" title="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" title="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20am%20interested%20in%20your%20VMC%20and%20CNC%20machining%20services."
+              title="Chat on WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
+              Bengaluru – 560058
+            </a>
+          </p>
+
+          <p>
+            <a href="tel:+918296223386">
+              <i class="fas fa-phone-alt"></i> +91 82962 23386
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20would%20like%20to%20enquire%20about%20your%20machining%20services."
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="mailto:admin@dm-technologies.in?subject=Warm%20Enquiry%20-%20CNC%20Machining%20Services&body=Hello%20DM%20Technologies,%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AI%20would%20like%20to%20enquire%20about%20your%20VMC%20and%20CNC%20machining%20services.%20Please%20share%20details%20regarding%20capabilities,%20lead%20time,%20and%20quotation%20process.%0A%0ALooking%20forward%20to%20your%20response.%0A%0ARegards,%0A[Your%20Name]"
+            >
+              <i class="fas fa-envelope"></i> admin@dm-technologies.in
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. DM Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Service Hero h2 animation
+      const serviceHeroH2 = document.querySelector(".service-hero-content h2");
+      if (serviceHeroH2) {
+        // Split text into spans if not already done
+        if (!serviceHeroH2.querySelector("span.letter")) {
+          const html = serviceHeroH2.innerHTML;
+          // Split by <br> and animate each line
+          serviceHeroH2.innerHTML = "";
+          html.split("<br>").forEach((line, lineIdx) => {
+            if (lineIdx > 0)
+              serviceHeroH2.appendChild(document.createElement("br"));
+            line
+              .replace(/<[^>]+>/g, "")
+              .split("")
+              .forEach((char, i) => {
+                const span = document.createElement("span");
+                span.className = "letter";
+                span.textContent = char === " " ? "\u00A0" : char;
+                serviceHeroH2.appendChild(span);
+              });
+          });
+        }
+        serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+          span.style.opacity = 0;
+          span.style.transform = "translateY(-30px)";
+          span.style.animation = "none";
+        });
+        const observerH2 = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              serviceHeroH2
+                .querySelectorAll("span.letter")
+                .forEach((span, i) => {
+                  span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                  span.style.animationDelay = i * 0.06 + "s";
+                });
+            }
+          },
+          { threshold: 0.5 },
+        );
+        observerH2.observe(serviceHeroH2);
+      }
+
+      // Service Hero h1 animation
+      const serviceHeroH1 = document.querySelector(".service-hero-content h1");
+      if (serviceHeroH1) {
+        if (!serviceHeroH1.querySelector("span.letter")) {
+          const text = serviceHeroH1.textContent;
+          serviceHeroH1.innerHTML = "";
+          text.split("").forEach((char) => {
+            const span = document.createElement("span");
+            span.className = "letter";
+            span.textContent = char === " " ? "\u00A0" : char;
+            serviceHeroH1.appendChild(span);
+          });
+        }
+        serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+          span.style.opacity = 0;
+          span.style.transform = "translateY(-30px)";
+          span.style.animation = "none";
+        });
+        const observerH1 = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              serviceHeroH1
+                .querySelectorAll("span.letter")
+                .forEach((span, i) => {
+                  span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                  span.style.animationDelay = i * 0.06 + "s";
+                });
+            }
+          },
+          { threshold: 0.5 },
+        );
+        observerH1.observe(serviceHeroH1);
+      }
+    });
+
+    // /
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const servicesSection = document.querySelector(".services");
+      if (!servicesSection) return;
+      servicesSection.style.opacity = 0;
+      servicesSection.style.transform = "translateY(32px)";
+      const observer = new IntersectionObserver(
+        function (entries) {
+          if (entries[0].isIntersecting) {
+            servicesSection.style.animation =
+              "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+            servicesSection.style.animationDelay = "0.2s";
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.3 },
+      );
+      observer.observe(servicesSection);
+    });
+
+    // Fade-up animation for feature section
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .querySelectorAll(".features-section")
+        .forEach(function (featureSection) {
+          featureSection.style.opacity = 0;
+          featureSection.style.transform = "translateY(32px)";
+          const observer = new IntersectionObserver(
+            function (entries) {
+              if (entries[0].isIntersecting) {
+                featureSection.style.animation =
+                  "fadeUp 0.8s cubic-bezier(.2,.9,.2,1) forwards";
+                featureSection.style.animationDelay = "0.2s";
+                observer.disconnect();
+              }
+            },
+            { threshold: 0.3 },
+          );
+          observer.observe(featureSection);
+        });
+    });
+  </script>
+</html>

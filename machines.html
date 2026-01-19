@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chandantechnology</title>
+    <link rel="icon" href="logo/CHANDAN TECHNOLOGY.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "poppins", sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    .service-hero-content h2 span.letter,
+    .service-hero-content h1 span.letter {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+      display: inline-block;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-hero {
+      background-image: url(img/10506876.jpg);
+      background-size: cover;
+
+      object-fit: contain;
+      background-position: center;
+      padding: 100px 30px;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      text-align: left;
+    }
+
+    .service-hero-content {
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-hero-content h2 {
+      font-size: 36px;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .service-hero-content h2 span {
+      font-weight: 700;
+      color: #ffdd00;
+    }
+
+    .bg-text {
+      font-size: 100px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1;
+      bottom: 30px;
+      left: 30px;
+      color: #0f67f4;
+    }
+    @media (max-width: 446px) {
+      .service-hero-content h2 {
+        font-size: 28px;
+      }
+      .bg-text {
+        font-size: 60px;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      font-family: "poppins", sans-serif;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .hero .highlight {
+      color: #1e73e8;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #1e73e8;
+      color: #fff;
+    }
+
+    .btn.primary:hover {
+      background: #125bb5;
+    }
+
+    .btn.secondary {
+      background: #f4f4f4;
+      color: #333;
+      border: 1px solid #ddd;
+    }
+
+    .btn.secondary:hover {
+      background: #e6e6e6;
+    }
+
+    /* Rating */
+    .rating {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .rating p {
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .rating a {
+      color: #1e73e8;
+      text-decoration: none;
+    }
+
+    /* Stats Section */
+    .hero-stats {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      font-family: "poppins", sans-serif;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+
+    .stat {
+      background: #f9f9f9;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .stat h2 {
+      font-size: 2rem;
+      color: #111;
+      margin-bottom: 10px;
+    }
+
+    .stat p {
+      font-size: 0.95rem;
+      color: #000000;
+    }
+
+    /* Color Variations */
+    .stat.blue {
+      background: #000000;
+      color: #ffffff;
+      font-size: 2rem;
+    }
+    .stat.blue p {
+      color: #d4d4d4;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .stat.blue h2 {
+      color: #1f61f0;
+      font-size: 2rem;
+    }
+
+    .stat.green {
+      background: #f0fdf4;
+      color: #111;
+      border: 1px solid #cce8d8;
+    }
+
+    .stat.lightgreen {
+      background: #d9f99d;
+      color: #111;
+    }
+
+    /* machines */
+
+    .machine-sec {
+      padding: 60px 20px;
+      background: #fff;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .machine-sec h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .machine-sec h2 span {
+      color: #e60012; /* Red Plus */
+      margin-left: 10px;
+    }
+
+    /* Grid Layout */
+    .machine-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    /* Machine Cards */
+    .machine-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+    }
+
+    .machine-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 12px;
+      border-radius: 8px;
+    }
+
+    .machine-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 12px;
+    }
+
+    /* Wide cards (side by side image + text) */
+    .machine-card.wide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      grid-column: span 2;
+    }
+
+    .machine-card.wide .machine-info {
+      flex: 1;
+    }
+
+    .machine-card.wide .machine-img {
+      flex: 1;
+    }
+
+    .machine-card.wide img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .machine-card ul {
+      list-style: disc;
+      margin: 0 0 15px 20px;
+      text-align: left;
+      color: #444;
+      font-size: 0.95rem;
+    }
+
+    /* Explore Button */
+    .explore-btn {
+      display: inline-block;
+      background: #007bff;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #7e7e7e;
+    }
+
+    .work-section {
+      margin-top: 2rem;
+      padding-bottom: 60px;
+    }
+    .work-header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    .work-header h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .work-header h2 span {
+      color: #3fa9f5;
+    }
+
+    .work-header p {
+      font-size: 1rem;
+      color: #525252;
+      margin-top: 10px;
+    }
+
+    /* Grid */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 250px;
+      gap: 20px;
+      padding: 20px 60px 60px;
+    }
+
+    /* Card */
+    .work-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .work-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .work-card:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.7);
+    }
+
+    /* Info */
+    .work-info {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .work-info h3 {
+      font-size: 1.1rem;
+      margin: 5px 0 0;
+      color: #ffffff;
+    }
+    .tag {
+      color: #fff;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      background: rgba(0, 149, 255, 0.8);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    /* CTA button */
+    .cta-btn {
+      background: #0095ff;
+      border: none;
+      padding: 12px 20px;
+      color: #fff;
+      font-size: 0.9rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #2a7fb6;
+    }
+
+    /* Special card sizing */
+    .large {
+      grid-row: span 2;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .wide {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      .large {
+        grid-row: span 1;
+      }
+    }
+  </style>
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="precision.html">Precision</a>
+        <a href="machines.html">Machine's</a>
+        <a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/8123638613?text=Hi%20Genius%20Tech!%20I%20am%20interested%20in%20your%20VMC%20solutions. Can%20you%20provide%20more%20details?"
+          class="btn-yellow"
+          >Enquiry ➜</a
+        >
+      </nav>
+    </header>
+
+    <section class="service-hero" id="services">
+      <div class="service-hero-content">
+        <h2>Our <br /><span></span></h2>
+        <h1 class="bg-text">Machines</h1>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+
+    <section class="machine-sec">
+      <h2>Explore Our Machines</h2>
+      <div class="machine-grid">
+        <div class="machine-card">
+          <img src="machine-img/VL-1300.png" alt="STM VL-1300 VMC" />
+          <div class="machine-info">
+            <h3>STM VL-1300 Vertical Machining Center</h3>
+            <ul>
+              <li>
+                Large-table VMC used for heavy and precision machined components
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="machine-img/VL-850.png" alt="STM VL-850 VMC" />
+          <div class="machine-info">
+            <h3>STM VL-850 Vertical Machining Center</h3>
+            <ul>
+              <li>Medium-capacity VMC for CNC job work and batch production</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="machine-img/VL-610.png" alt="STM VL-610 VMC" />
+          <div class="machine-info">
+            <h3>STM VL-610 Vertical Machining Center</h3>
+            <ul>
+              <li>
+                Compact VMC suitable for small to medium precision components
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="machine-img/image_0901.jpg" alt="Toolcraft BR-5535 CNC" />
+          <div class="machine-info">
+            <h3>Toolcraft EX Series BR-5535</h3>
+            <ul>
+              <li>
+                CNC milling and engraving machine for fine and detailed
+                machining
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img
+            src="machine-img/stainless-steel-cnc-engraving-machine-1000x1000.png"
+            alt="Sumeru MVMC-6040"
+          />
+          <div class="machine-info">
+            <h3>Sumeru MVMC-6040</h3>
+            <ul>
+              <li>
+                CNC engraving and precision cutting machine for detailed work
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-section">
+      <div class="work-header">
+        <h2>Shaping <span>Precision Through Expertise</span></h2>
+        <p>
+          At Chandhan Technology, we provide reliable milling, drilling, and
+          component-manufacturing solutions built on accuracy, consistency, and
+          strong engineering practices.
+        </p>
+      </div>
+
+      <div class="work-grid">
+        <!-- Card 1 -->
+        <div class="work-card">
+          <img
+            src="img/abt/WhatsApp Image 2025-09-24 at 13.16.32_08ed03c7.jpg"
+            alt="VMC Milling"
+          />
+          <div class="work-info">
+            <span class="tag">Milling</span>
+            <h3>High-Precision Milling Operations</h3>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="work-card">
+          <img
+            src="img/abt/WhatsApp Image 2025-09-24 at 13.16.33_42b42982.jpg"
+            alt="Machining"
+          />
+          <div class="work-info">
+            <span class="tag">Drilling</span>
+            <h3>Accurate Drilling & Component Development</h3>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="work-card large">
+          <img
+            src="cerficate img/ISO Certificate_page-0001.jpg"
+            alt="Assembly Solutions"
+          />
+          <div class="work-info">
+            <span class="tag">ISO </span>
+            <h3>ISO Certified company</h3>
+          </div>
+        </div>
+        <div class="work-card large">
+          <img
+            src="cerficate img/msme zed_page-0001.jpg"
+            alt="Assembly Solutions"
+          />
+          <div class="work-info">
+            <span class="tag">ZED BRONZE</span>
+            <h3>
+              under MSME Sustainable (ZED) Certification Scheme awarded by
+              Government of India
+            </h3>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="work-card">
+          <img
+            src="img/abt/metal-industry-workshop-precision-machinery-automated-production-line-robotic-arm-generated-by-ai-free-photo.jpg"
+            alt="Quality Assurance"
+          />
+          <div class="work-info">
+            <span class="tag">Quality</span>
+            <h3>Reliable Inspection & Quality Assurance</h3>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="work-card wide">
+          <img
+            src="img/abt/automotive-parts-manufacturing-canada-with-precision-engineering-processes_1291600-47172.jpg"
+            alt="Manufacturing Innovation"
+          />
+          <div class="work-info">
+            <span class="tag">Innovation</span>
+            <h3>Advancing Modern Manufacturing Practices</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-brand">
+          <img
+            src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+            alt="DM Technologies Logo"
+            class="logo"
+          />
+          <p>
+            DM Technologies is a precision-driven VMC machining and CNC job work
+            company delivering accurate, reliable, and high-quality machined
+            components for OEMs and engineering industries.
+          </p>
+        </div>
+
+        <!-- Quick Menu -->
+        <div class="footer-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="services.html">VMC Machining</a></li>
+            <li><a href="services.html">CNC Job Work</a></li>
+            <li><a href="machines.html">Machines</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Policy</a></li>
+            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="contact.html">Certifications</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" title="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" title="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" title="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20am%20interested%20in%20your%20VMC%20and%20CNC%20machining%20services."
+              title="Chat on WhatsApp"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-contact">
+          <p>
+            <a
+              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
+              Bengaluru – 560058
+            </a>
+          </p>
+
+          <p>
+            <a href="tel:+918296223386">
+              <i class="fas fa-phone-alt"></i> +91 82962 23386
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="https://wa.me/918296223386?text=Hi%20DM%20Technologies,%20I%20would%20like%20to%20enquire%20about%20your%20machining%20services."
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </p>
+
+          <p>
+            <a
+              href="mailto:admin@dm-technologies.in?subject=Warm%20Enquiry%20-%20CNC%20Machining%20Services&body=Hello%20DM%20Technologies,%0A%0AI%20hope%20you%20are%20doing%20well.%0A%0AI%20would%20like%20to%20enquire%20about%20your%20VMC%20and%20CNC%20machining%20services.%20Please%20share%20details%20regarding%20capabilities,%20lead%20time,%20and%20quotation%20process.%0A%0ALooking%20forward%20to%20your%20response.%0A%0ARegards,%0A[Your%20Name]"
+            >
+              <i class="fas fa-envelope"></i> admin@dm-technologies.in
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Copyright 2025. DM Technologies. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Service Hero h2 animation
+        const serviceHeroH2 = document.querySelector(
+          ".service-hero-content h2",
+        );
+        if (serviceHeroH2) {
+          // Split text into spans if not already done
+          if (!serviceHeroH2.querySelector("span.letter")) {
+            const html = serviceHeroH2.innerHTML;
+            // Split by <br> and animate each line
+            serviceHeroH2.innerHTML = "";
+            html.split("<br>").forEach((line, lineIdx) => {
+              if (lineIdx > 0)
+                serviceHeroH2.appendChild(document.createElement("br"));
+              line
+                .replace(/<[^>]+>/g, "")
+                .split("")
+                .forEach((char, i) => {
+                  const span = document.createElement("span");
+                  span.className = "letter";
+                  span.textContent = char === " " ? "\u00A0" : char;
+                  serviceHeroH2.appendChild(span);
+                });
+            });
+          }
+          serviceHeroH2.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH2 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH2
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH2.observe(serviceHeroH2);
+        }
+
+        // Service Hero h1 animation
+        const serviceHeroH1 = document.querySelector(
+          ".service-hero-content h1",
+        );
+        if (serviceHeroH1) {
+          if (!serviceHeroH1.querySelector("span.letter")) {
+            const text = serviceHeroH1.textContent;
+            serviceHeroH1.innerHTML = "";
+            text.split("").forEach((char) => {
+              const span = document.createElement("span");
+              span.className = "letter";
+              span.textContent = char === " " ? "\u00A0" : char;
+              serviceHeroH1.appendChild(span);
+            });
+          }
+          serviceHeroH1.querySelectorAll("span.letter").forEach((span) => {
+            span.style.opacity = 0;
+            span.style.transform = "translateY(-30px)";
+            span.style.animation = "none";
+          });
+          const observerH1 = new IntersectionObserver(
+            ([entry]) => {
+              if (entry.isIntersecting) {
+                serviceHeroH1
+                  .querySelectorAll("span.letter")
+                  .forEach((span, i) => {
+                    span.style.animation = "fadeInUp 0.6s ease-out forwards";
+                    span.style.animationDelay = i * 0.06 + "s";
+                  });
+              }
+            },
+            { threshold: 0.5 },
+          );
+          observerH1.observe(serviceHeroH1);
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        menuToggle.addEventListener("click", function () {
+          navLinks.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      // ...existing code...
+
+      // Count animation for hero-stats numbers
+      document.addEventListener("DOMContentLoaded", function () {
+        function animateCount(el, target, duration = 1200) {
+          let start = 0;
+          let startTime = null;
+          target = parseInt(target, 10);
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            const progress = Math.min((ts - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * (target - start) + start);
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(step);
+        }
+
+        // Animate all .stat h2 numbers when .hero-stats enters viewport
+        const statsSection = document.querySelector(".hero-stats");
+        if (statsSection) {
+          const observer = new IntersectionObserver(
+            function (entries) {
+              if (entries[0].isIntersecting) {
+                statsSection
+                  .querySelectorAll(".stat h2")
+                  .forEach(function (h2) {
+                    const target = h2.textContent.replace(/\D/g, "");
+                    if (target) animateCount(h2, target);
+                  });
+                observer.disconnect();
+              }
+            },
+            { threshold: 0.3 },
+          );
+          observer.observe(statsSection);
+        }
+      });
+
+      // ...existing code...
+    </script>
+  </body>
+</html>

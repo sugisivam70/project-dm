@@ -194,7 +194,7 @@ nav a.active {
   padding: 140px 60px 60px;
   text-align: left;
   background-image: url();
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   margin-bottom: 1.5rem;
   position: relative;
@@ -355,11 +355,14 @@ nav a.active {
     display: flex;
     justify-content: center;
     position: relative;
+    object-fit: contain;
   }
   .hero-image img {
     width: 100%;
     max-width: 320px;
     border-radius: 10px;
+    object-fit: contain;
+    
   }
   .badge.nx {
     position: absolute;

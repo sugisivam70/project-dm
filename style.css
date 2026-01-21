@@ -168,6 +168,52 @@ nav a.active {
   background: #f0c500;
 }
 
+
+/* Dropdown wrapper */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Hide dropdown by default */
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 180px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.25s ease;
+      z-index: 1000;
+      margin-top: 10px;
+    }
+
+    /* Dropdown links */
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 16px;
+      color: #2d2d2d;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f2f6ff;
+      color: #007bff;
+    }
+
+    /* Show dropdown on hover */
+    .nav-dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 /* ...existing code... */
 
 /* FADE-IN NAV PANEL */

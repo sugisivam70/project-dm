@@ -237,6 +237,128 @@
         transform: translateY(32px);
         animation: none;
       }
+
+      /* ===============================
+   MATERIALS WE WORK WITH
+================================ */
+
+      .materials-section {
+        padding: 80px 20px;
+        background: #ffffff;
+      }
+
+      .materials-container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 50px;
+        align-items: flex-start;
+      }
+
+      /* ---------- Left Content ---------- */
+
+      .materials-title {
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 15px;
+        gap: 12px;
+      }
+
+      .materials-title .title-bar {
+        width: 6px;
+        height: 34px;
+        background: #6a1b9a;
+        display: inline-block;
+      }
+
+      .materials-intro {
+        font-size: 15px;
+        color: #555;
+        margin-bottom: 25px;
+        max-width: 560px;
+      }
+
+      .materials-content h4 {
+        margin-top: 22px;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+      }
+
+      .materials-content ul {
+        padding-left: 18px;
+        margin-bottom: 12px;
+      }
+
+      .materials-content ul li {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 6px;
+        line-height: 1.6;
+      }
+
+      .materials-note {
+        margin-top: 18px;
+        font-size: 14px;
+        color: #555;
+        max-width: 580px;
+      }
+
+      /* ---------- Right Images ---------- */
+
+      .materials-images {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .materials-images img {
+        width: 100%;
+        border-radius: 6px;
+        object-fit: cover;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ===============================
+   RESPONSIVE
+================================ */
+
+      @media (max-width: 992px) {
+        .materials-container {
+          grid-template-columns: 1fr;
+        }
+
+        .materials-images {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .materials-section {
+          padding: 60px 16px;
+        }
+
+        .materials-title {
+          font-size: 24px;
+        }
+
+        .materials-intro {
+          font-size: 14px;
+        }
+
+        .materials-content ul li {
+          font-size: 13.5px;
+        }
+
+        .materials-images {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
@@ -341,6 +463,72 @@
         </div>
       </div>
     </section>
+
+    <section class="materials-section">
+      <div class="materials-container">
+        <!-- Left Content -->
+        <div class="materials-content">
+          <h2 class="materials-title">
+            <span class="title-bar"></span>
+            MATERIALS WE WORK WITH!
+          </h2>
+
+          <p class="materials-intro">
+            We machine a wide range of materials with precision, care, and the
+            right technology for each application.
+          </p>
+
+          <h4>Ferrous Materials:</h4>
+          <ul>
+            <li>Mild Steel & Carbon Steel</li>
+            <li>Alloy Steel (EN8, EN19, EN24, etc.)</li>
+            <li>Tool Steel</li>
+            <li>Stainless Steel (202, 304, 316, 410, 420)</li>
+            <li>Cast Iron</li>
+          </ul>
+
+          <h4>Non-Ferrous Materials:</h4>
+          <ul>
+            <li>Aluminium (all commercial & industrial grades)</li>
+            <li>Brass</li>
+            <li>Copper</li>
+            <li>Bronze</li>
+          </ul>
+
+          <h4>Special Requirements:</h4>
+          <ul>
+            <li>Hardened components</li>
+            <li>Customer-specified or special grades</li>
+          </ul>
+
+          <h4>Industries We Serve:</h4>
+          <ul>
+            <li>Automotive & Auto Components</li>
+            <li>Industrial Machinery</li>
+            <li>Tooling & Fixtures</li>
+            <li>Manufacturing & Fabrication</li>
+            <li>Engineering & OEM Support</li>
+          </ul>
+
+          <p class="materials-note">
+            Each material is machined using optimized VMC programs, proper
+            tooling, and precise process control to ensure accuracy, surface
+            finish, and reliability.
+          </p>
+        </div>
+
+        <!-- Right Images -->
+        <div class="materials-images">
+          <img
+            src="img/wework/cube.jpg"
+            alt="Metal Blocks Materials"
+          />
+          <img src="img/wework/Ferrous and Non Ferrous 1.jpg" alt="Surface Plate" />
+          
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
 
     <section class="features-section" id="feature">

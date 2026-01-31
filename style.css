@@ -1421,6 +1421,28 @@ img .timeline-content {
   .expert-box {
     flex: 1 1 100%;
   }
+
+  /* Mobile responsive features grid */
+  .features-section {
+    padding: 40px 15px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .feature-box {
+    padding: 20px;
+  }
+
+  .feature-box h3 {
+    font-size: 16px;
+  }
+
+  .feature-box p {
+    font-size: 13px;
+  }
 }
 
 .popular-details {

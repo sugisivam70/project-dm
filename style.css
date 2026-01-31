@@ -1424,7 +1424,10 @@ img .timeline-content {
 
   /* Mobile responsive features grid */
   .features-section {
-    padding: 40px 15px;
+    padding: 40px 15px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
   }
 
   .features-grid {

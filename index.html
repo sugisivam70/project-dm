@@ -6,7 +6,8 @@
     <title>DM-technologies</title>
     <link rel="icon" href="img/logo/DM LOGO PDF_page-0001.jpg" />
 
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
+    <script src="nav.js?v=1" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -26,16 +27,36 @@
     />
   </head>
   <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-mark">
+        <img
+          src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+          alt="DM Technologies Logo"
+        />
+      </div>
+      <div class="preloader-text-wrap">
+        <div class="preloader-brand">DM TECHNOLOGIES</div>
+        <div class="preloader-subtext">PRECISION THAT POWERS PRODUCTION</div>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo">
-        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+        <img
+          src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+          alt="navlogo"
+        />
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
       <nav class="nav-links">
-        <a href="index.html">About</a>
+        <a href="index.html" class="active">About</a>
         <a href="services.html">Services</a>
         <a href="precision.html">Precision</a>
         <a href="machines.html">Machine's</a>
@@ -58,67 +79,68 @@
 
     <!-- Hero Section -->
     <section class="hero">
-      <img
-        class="bgimg"
-        src="img/logo/Production process using robots and computers at smart factory.jpg"
-        alt="DM Technologies VMC Machining Facility"
-      />
+      <div class="hero-video" aria-hidden="true">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/AZJPx2lH7A4?autoplay=1&mute=1&loop=1&playlist=AZJPx2lH7A4&controls=0&modestbranding=1&playsinline=1&rel=0&disablekb=1&iv_load_policy=3"
+          title=""
+          tabindex="-1"
+          allow="autoplay; encrypted-media"
+        ></iframe>
+      </div>
 
       <div class="hero-content">
         <div class="hero-left">
-          <h1><span>VMC</span> Machining Solutions</h1>
+          <h1><span>VMC & CNC</span> Machining Solutions</h1>
           <div class="tagline">
-            Precision-driven VMC machining and CNC job work for OEMs and
-            engineering industries.
+            <strong>PRECISION THAT POWERS PRODUCTION</strong> — High-precision
+            VMC machining and CNC job work for OEMs and engineering industries.
           </div>
         </div>
 
         <!-- VMC Image -->
-        <div class="hero-image">
-          <img src="img/dm-vmc-machine.jpg" alt="DM Technologies VMC Machine" />
-
-          <div class="badge nx">
-            DM–VMC Series<br />
-            <small>High-Precision Vertical Machining</small><br />
-            <a href="#machines">View Machines</a>
-          </div>
-
-          <div class="badge sun">
-            PRECISION<br />
-            <small>±0.005 mm</small>
-          </div>
-        </div>
+        <div class="hero-image"></div>
       </div>
 
       <!-- Feature Cards -->
       <div class="herofeatures">
-        <div class="herofeature-card review">
-          <p>ISO 9001:2015</p>
-          <div class="stars">Certified Quality</div>
-          <a href="machines.html">Quality Policy</a>
+        <div class="herofeature-card">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fas fa-industry"></i>
+          </div>
+          <div>
+            <h3>25+ Machines</h3>
+            <p>Advanced VMC, CNC, EDM and inspection systems.</p>
+          </div>
         </div>
 
-        <div class="herofeature-card battery">
-          <p>High-Speed Machining</p>
-          <img
-            src="img/abt/360_F_500918189_xsBOBFpzqSekBwrIQf2e2A7jwwS5Ntqh.jpg"
-            alt="High-Speed VMC Spindle"
-          />
+        <div class="herofeature-card">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fas fa-crosshairs"></i>
+          </div>
+          <div>
+            <h3>Precision Focused</h3>
+            <p>Tight tolerances and consistent surface finish.</p>
+          </div>
         </div>
 
-        <div class="herofeature-card battery">
-          <p>Consistent Reliability</p>
-          <small>Planned production with tight tolerance control</small>
-          <img
-            src="img/abt/banner-guide-to-the-components-of-a-cnc-machine.jpg"
-            alt="Precision Machining Process"
-          />
+        <div class="herofeature-card">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div>
+            <h3>Quality Assured</h3>
+            <p>Inspection-driven production for dependable results.</p>
+          </div>
         </div>
 
-        <div class="herofeature-card battery">
-          <p>Automation Ready</p>
-          <small>ATC-compatible for efficient production</small>
-          <img src="img/abt/CNC-Machine.jpg" alt="CNC Automation Setup" />
+        <div class="herofeature-card">
+          <div class="hero-feature-icon" aria-hidden="true">
+            <i class="fas fa-truck-fast"></i>
+          </div>
+          <div>
+            <h3>On-Time Delivery</h3>
+            <p>Planned execution from prototype to production.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -137,9 +159,6 @@
           components. We support OEMs and engineering industries with consistent
           performance, tight tolerances, and dependable delivery.
         </p>
-        <a href="contact.html"
-          ><button class="cta-button">Talk to Us ↗</button></a
-        >
       </div>
 
       <div class="about-images">
@@ -205,62 +224,7 @@
     </section>
 
     <!-- Trusted Clients -->
-    <section class="trusted">
-      <p class="trusted-title">Trusted by Global Manufacturers</p>
-      <div class="logos-slider">
-        <div class="logos-track">
-          <!-- Repeat logos twice for seamless loop -->
-          <img src="img/slider/advertising_agency_04.jpg" alt="Client 1" />
-          <img
-            src="img/slider/2011.i402.055..electricity and lighting flat icons-02.jpg"
-            alt="Client 2"
-          />
-          <img src="img/slider/2368498.jpg" alt="Client 3" />
-          <img src="img/slider/6166856.jpg" alt="Client 4" />
-          <img
-            src="img/slider/Production process using robots and computers at smart factory.jpg"
-            alt="Client 5"
-          />
 
-          <!-- Duplicates -->
-          <img src="img/slider/9859.jpg" alt="Client 1" />
-          <img
-            src="img/slider/2011.i402.055..electricity and lighting flat icons-02.jpg"
-            alt="Client 2"
-          />
-          <img src="img/slider/2368498.jpg" alt="Client 3" />
-          <img src="img/slider/6166856.jpg" alt="Client 4" />
-          <img
-            src="img/slider/Production process using robots and computers at smart factory.jpg"
-            alt="Client 5"
-          />
-          <img src="img/slider/advertising_agency_04.jpg" alt="Client 1" />
-          <img
-            src="img/slider/2011.i402.055..electricity and lighting flat icons-02.jpg"
-            alt="Client 2"
-          />
-          <img src="img/slider/2368498.jpg" alt="Client 3" />
-          <img src="img/slider/6166856.jpg" alt="Client 4" />
-          <img
-            src="img/slider/Production process using robots and computers at smart factory.jpg"
-            alt="Client 5"
-          />
-
-          <!-- Duplicates -->
-          <img src="img/slider/9859.jpg" alt="Client 1" />
-          <img
-            src="img/slider/2011.i402.055..electricity and lighting flat icons-02.jpg"
-            alt="Client 2"
-          />
-          <img src="img/slider/2368498.jpg" alt="Client 3" />
-          <img src="img/slider/6166856.jpg" alt="Client 4" />
-          <img
-            src="img/slider/Production process using robots and computers at smart factory.jpg"
-            alt="Client 5"
-          />
-        </div>
-      </div>
-    </section>
     <section class="process-section" id="process">
       <div class="process-container">
         <h5 class="sub-heading">DM-Tech Process</h5>
@@ -600,8 +564,8 @@
           <h4>Support</h4>
           <ul>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="quality.html">Quality Policy</a></li>
-            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="precision.html">Quality Policy</a></li>
+            <li><a href="precision.html">ISO 9001:2015</a></li>
             <li><a href="contact.html">Certifications</a></li>
           </ul>
         </div>
@@ -634,13 +598,13 @@
         <div class="footer-contact">
           <p>
             <a
-              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              href="https://www.google.com/maps/place/DM+TECHNOLOGIES/@13.022067,77.5046175,808m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae3d002bf0642b:0x35ebb0b2212893b7!8m2!3d13.0220618!4d77.5071924!16s%2Fg%2F11yt00_4nh?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener"
             >
               <i class="fas fa-map-marker-alt"></i>
-              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
-              Bengaluru – 560058
+              NO:450, 12 CROSS, PEENYA INDUSTRIAL AREA, PEENYA 4 PHASE,
+              BENGALURU-560058
             </a>
           </p>
 
@@ -679,6 +643,12 @@
         <p>© Copyright 2025. DM Technologies. All rights reserved.</p>
       </div>
     </footer>
+
+    <script>
+      window.addEventListener("load", () => {
+        document.querySelector(".preloader").classList.add("is-hidden");
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -890,6 +860,19 @@
           { threshold: 0.3 },
         );
         observer.observe(cncServicesSection);
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(function () {
+            preloader.classList.add("is-hidden");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 600);
+          }, 500);
+        }
       });
     </script>
   </body>

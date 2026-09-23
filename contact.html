@@ -22,7 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
+    <script src="nav.js?v=1" defer></script>
   </head>
   <style>
     /* Reset */
@@ -770,12 +771,29 @@
     }
   </style>
   <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-mark">
+        <img
+          src="img/logo/ChatGPT Image Sep 23, 2026, 11_55_25 AM.png"
+          alt="DM Technologies Logo"
+        />
+      </div>
+      <div class="preloader-text-wrap">
+        <div class="preloader-brand">DM TECHNOLOGIES</div>
+        <div class="preloader-subtext">PRECISION THAT POWERS PRODUCTION</div>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo">
-        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+        <img src="img/logo/ChatGPT Image Sep 23, 2026, 11_55_25 AM.png" alt="navlogo" />
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
       <nav class="nav-links">
@@ -784,7 +802,7 @@
         <a href="precision.html">Precision</a>
         <a href="machines.html">Machine's</a>
         <div class="nav-dropdown">
-          <a href="contact.html" class="dropdown-toggle">Contact</a>
+          <a href="contact.html" class="dropdown-toggle active">Contact</a>
           <div class="dropdown-menu">
             <a href="meet.html">Meet Our Team</a>
           </div>
@@ -895,8 +913,8 @@
           <h3>Our Location</h3>
           <p>
             <i class="fas fa-map-marker-alt"></i>
-            DM Technologies, Plot V-60, 2nd Stage, Kalika Nagar, Peenya,
-            Bengaluru, Karnataka – 560058
+            NO:450, 12 CROSS, PEENYA INDUSTRIAL AREA, PEENYA 4 PHASE,
+            BENGALURU-560058
           </p>
         </div>
       </div>
@@ -907,7 +925,7 @@
         <!-- Left Column -->
         <div class="footer-brand">
           <img
-            src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+            src="img/logo/ChatGPT Image Sep 23, 2026, 11_55_25 AM.png"
             alt="DM Technologies Logo"
             class="logo"
           />
@@ -935,8 +953,8 @@
           <h4>Support</h4>
           <ul>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="quality.html">Quality Policy</a></li>
-            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="precision.html">Quality Policy</a></li>
+            <li><a href="precision.html">ISO 9001:2015</a></li>
             <li><a href="contact.html">Certifications</a></li>
           </ul>
         </div>
@@ -969,13 +987,13 @@
         <div class="footer-contact">
           <p>
             <a
-              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              href="https://www.google.com/maps/place/DM+TECHNOLOGIES/@13.022067,77.5046175,808m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae3d002bf0642b:0x35ebb0b2212893b7!8m2!3d13.0220618!4d77.5071924!16s%2Fg%2F11yt00_4nh?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener"
             >
               <i class="fas fa-map-marker-alt"></i>
-              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
-              Bengaluru – 560058
+              NO:450, 12 CROSS, PEENYA INDUSTRIAL AREA, PEENYA 4 PHASE,
+              BENGALURU-560058
             </a>
           </p>
 
@@ -984,7 +1002,7 @@
               <i class="fas fa-phone-alt"></i> +91 82962 23386
             </a>
           </p>
-           <p>
+          <p>
             <a href="tel:+917026707866">
               <i class="fas fa-phone-alt"></i> +91 7026707866
             </a>
@@ -1192,6 +1210,19 @@ ${name}`;
 
             this.reset();
           });
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(function () {
+            preloader.classList.add("is-hidden");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 600);
+          }, 500);
         }
       });
     </script>

@@ -22,7 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
+    <script src="nav.js?v=1" defer></script>
   </head>
   <style>
     /* Reset */
@@ -289,8 +290,10 @@
     }
 
     .machine-card img {
-      max-width: 100%;
-      height: auto;
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      background: #f8fafc;
       margin-bottom: 12px;
       border-radius: 8px;
     }
@@ -472,19 +475,36 @@
     }
   </style>
   <body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-mark">
+        <img
+          src="img/logo//Picsart_26-01-17_12-23-05-034.png"
+          alt="DM Technologies Logo"
+        />
+      </div>
+      <div class="preloader-text-wrap">
+        <div class="preloader-brand">DM TECHNOLOGIES</div>
+        <div class="preloader-subtext">PRECISION THAT POWERS PRODUCTION</div>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+    </div>
+
     <!-- Navbar -->
     <header class="navbar">
       <div class="logo">
-        <img src="img/logo/Picsart_26-01-17_12-23-05-034.png" alt="navlogo" />
+        <img src="img/logo/ChatGPT Image Sep 23, 2026, 11_55_25 AM.png" alt="navlogo" />
       </div>
-      <button class="menu-toggle" aria-label="Toggle menu">
+      <button class="menu-toggle" type="button" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
       </button>
       <nav class="nav-links">
         <a href="index.html">About</a>
         <a href="services.html">Services</a>
         <a href="precision.html">Precision</a>
-        <a href="machines.html">Machine's</a>
+        <a href="machines.html" class="active">Machine's</a>
         <div class="nav-dropdown">
           <a href="contact.html" class="dropdown-toggle">Contact</a>
           <div class="dropdown-menu">
@@ -516,9 +536,9 @@
       <div class="machine-grid">
         <!-- Machine 1 -->
         <div class="machine-card">
-          <img src="machine-img/VL-1300.png" alt="STM VL-1300 VMC" />
+          <img src="img/pdf-machines/machine-03.jpg" alt="STM VL-1300 VMC" />
           <div class="machine-info">
-            <h3>STM VL-1300 Vertical Machining Center</h3>
+            <h3>STM VL-1300 Vertical Machining Center(2)</h3>
             <ul>
               <li><strong>Axis:</strong> 3-Axis Vertical Machining Center</li>
               <li><strong>Travel (X / Y / Z):</strong> 1300 / 700 / 700 mm</li>
@@ -544,12 +564,15 @@
 
         <!-- Machine 2 -->
         <div class="machine-card">
-          <img src="machine-img/VL-850.png" alt="STM VL-850 VMC" />
+          <img src="img/pdf-machines/machine-05.jpg" alt="STM VL-850 VMC" />
           <div class="machine-info">
-            <h3>STM VL-850 Vertical Machining Center</h3>
+            <h3>STM VL-850 Vertical Machining Center(3)</h3>
             <ul>
-              <li><strong>Axis:</strong> 3-Axis Vertical Machining Center   +Rotary 4 Axis Preparation</li>
-             
+              <li>
+                <strong>Axis:</strong> 3-Axis Vertical Machining Center +Rotary
+                4 Axis Preparation
+              </li>
+
               <li><strong>Travel (X / Y / Z):</strong> 850 / 510 / 510 mm</li>
               <li><strong>Ball Screws:</strong> C3 grade, 40 mm (X, Y, Z)</li>
               <li><strong>Spindle Nose to Table:</strong> 140 – 650 mm</li>
@@ -573,9 +596,9 @@
 
         <!-- Machine 3 -->
         <div class="machine-card">
-          <img src="machine-img/VL-610.png" alt="STM VL-610 VMC" />
+          <img src="img/pdf-machines/machine-07.jpg" alt="STM VL-610 VMC" />
           <div class="machine-info">
-            <h3>STM VL-610 Vertical Machining Center</h3>
+            <h3>STM VL-610 Vertical Machining Center(3)</h3>
             <ul>
               <li><strong>Axis:</strong> 3-Axis Vertical Machining Center</li>
               <li><strong>Travel (X / Y / Z):</strong> 640 / 450 / 500 mm</li>
@@ -601,7 +624,7 @@
 
         <!-- Machine 4 -->
         <div class="machine-card">
-          <img src="machine-img/image_0901.jpg" alt="Toolcraft BR-5535 CNC" />
+          <img src="img/pdf-machines/machine-14.jpg" alt="Toolcraft BR-5535 CNC" />
           <div class="machine-info">
             <h3>Toolcraft EX Series BR-5535</h3>
             <ul>
@@ -640,7 +663,7 @@
         <!-- Machine 5 -->
         <div class="machine-card">
           <img
-            src="machine-img/stainless-steel-cnc-engraving-machine-1000x1000.png"
+            src="img/pdf-machines/machine-15.jpg"
             alt="Sumeru MVMC-6040"
           />
           <div class="machine-info">
@@ -668,6 +691,149 @@
                 <strong>Usage:</strong> Suitable for detailed and
                 precision-oriented work
               </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-01.jpg" alt="STM DL-2620 double column VMC" loading="lazy" />
+          <div class="machine-info">
+            <h3>STM DL-2620 Double Column VMC</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 2600 / 2000 / 900 mm</li>
+              <li><strong>Table Load:</strong> Up to 1500 kg</li>
+              <li><strong>Spindle:</strong> BBT40, 10,000 RPM</li>
+              <li><strong>Position Accuracy:</strong> ±0.005 mm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-02.jpg" alt="STM VD-1570 VMC" loading="lazy" />
+          <div class="machine-info">
+            <h3>STM VD-1570 VMC</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 1500 / 700 / 700 mm</li>
+              <li><strong>Table Size:</strong> 1000 × 500 mm</li>
+              <li><strong>Spindle:</strong> BBT40, 10,000 RPM</li>
+              <li><strong>Guideways:</strong> LM roller guideways</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-04.jpg" alt="STM VD-850 VMC" loading="lazy" />
+          <div class="machine-info">
+            <h3>STM VD-850 VMC(3)</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 850 / 510 / 510 mm</li>
+              <li><strong>Table Size:</strong> 1000 × 500 mm</li>
+              <li><strong>Transmission:</strong> Direct drive</li>
+              <li><strong>Repeatability:</strong> ±0.003 mm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-06.jpg" alt="STM VD-610 VMC" loading="lazy" />
+          <div class="machine-info">
+            <h3>STM VD-610 VMC(3)</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 640 / 450 / 500 mm</li>
+              <li><strong>Table Size:</strong> 800 × 450 mm</li>
+              <li><strong>Transmission:</strong> Direct drive</li>
+              <li><strong>Spindle:</strong> BBT40, 10,000 RPM</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-08.jpg" alt="LMW S Turn 1 series turning machine" loading="lazy" />
+          <div class="machine-info">
+            <h3>LMW S Turn 1 Series</h3>
+            <ul>
+              <li><strong>Maximum Turning Diameter:</strong> 320 mm</li>
+              <li><strong>Maximum Turning Length:</strong> 300 mm</li>
+              <li><strong>Chuck Size:</strong> 8 inch (210 mm)</li>
+              <li><strong>Maximum Spindle Speed:</strong> 4500 RPM</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-09.jpg" alt="LMW LL20 L5 series turning machine" loading="lazy" />
+          <div class="machine-info">
+            <h3>LMW LL20 L5 Series</h3>
+            <ul>
+              <li><strong>Maximum Turning Diameter:</strong> 380 mm</li>
+              <li><strong>Maximum Turning Length:</strong> 500 mm</li>
+              <li><strong>Maximum Spindle Speed:</strong> 3500 RPM</li>
+              <li><strong>Controller:</strong> Fanuc CNC</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-10.jpg" alt="STM FX-400 five axis VMC" loading="lazy" />
+          <div class="machine-info">
+            <h3>STM FX-400 5-Axis VMC</h3>
+            <ul>
+              <li><strong>Working Envelope:</strong> 600 × 500 × 500 mm</li>
+              <li><strong>Spindle:</strong> BBT40, up to 15,000 RPM</li>
+              <li><strong>Tool Changer:</strong> 24-tool automatic changer</li>
+              <li><strong>Repeatability:</strong> ±0.0035 mm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-11.jpg" alt="Excetek EX600 CNC wire cut EDM" loading="lazy" />
+          <div class="machine-info">
+            <h3>Excetek EX600 CNC Wire Cut EDM</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 600 / 400 / 300 mm</li>
+              <li><strong>Work Table:</strong> 850 × 600 mm</li>
+              <li><strong>Wire Diameter:</strong> 0.15 – 0.30 mm</li>
+              <li><strong>Position Accuracy:</strong> ±0.005 mm</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-12.jpg" alt="Skitek S-45Z die sinking EDM" loading="lazy" />
+          <div class="machine-info">
+            <h3>Skitek S-45Z ZNC Die Sinking EDM</h3>
+            <ul>
+              <li><strong>Travel (X / Y / Z):</strong> 450 / 350 / 200 mm</li>
+              <li><strong>Work Table:</strong> 700 × 400 mm</li>
+              <li><strong>Workpiece Weight:</strong> Up to 1000 kg</li>
+              <li><strong>Servo System:</strong> AC servo-controlled Z-axis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-13.jpg" alt="Zeiss Contura coordinate measuring machine" loading="lazy" />
+          <div class="machine-info">
+            <h3>Zeiss Contura 9/18/6 CMM</h3>
+            <ul>
+              <li><strong>Measuring Range:</strong> 900 / 1800 / 600 mm</li>
+              <li><strong>Measuring Accuracy:</strong> 1.4 + L/350 µm</li>
+              <li><strong>Structure:</strong> Granite table and bridge</li>
+              <li><strong>Software:</strong> Zeiss Calypso</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="machine-card">
+          <img src="img/pdf-machines/machine-16.jpg" alt="Omega Vision measuring machine" loading="lazy" />
+          <div class="machine-info">
+            <h3>Omega Vision Measuring Machine</h3>
+            <ul>
+              <li><strong>Type:</strong> Non-contact optical inspection system</li>
+              <li><strong>Measuring Range:</strong> 500 × 400 mm</li>
+              <li><strong>Optics:</strong> High-resolution CCD camera</li>
+              <li><strong>Use:</strong> Dimensional inspection and quality control</li>
             </ul>
           </div>
         </div>
@@ -720,7 +886,7 @@
             <h3>ISO Certified company</h3>
           </div>
         </div>
-       
+
         <!-- Card 4 -->
         <div class="work-card">
           <img
@@ -752,7 +918,7 @@
         <!-- Left Column -->
         <div class="footer-brand">
           <img
-            src="img/logo/Picsart_26-01-17_12-23-05-034.png"
+            src="img/logo/ChatGPT Image Sep 23, 2026, 11_55_25 AM.png"
             alt="DM Technologies Logo"
             class="logo"
           />
@@ -780,8 +946,8 @@
           <h4>Support</h4>
           <ul>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="quality.html">Quality Policy</a></li>
-            <li><a href="quality.html">ISO 9001:2015</a></li>
+            <li><a href="precision.html">Quality Policy</a></li>
+            <li><a href="precision.html">ISO 9001:2015</a></li>
             <li><a href="contact.html">Certifications</a></li>
           </ul>
         </div>
@@ -814,13 +980,13 @@
         <div class="footer-contact">
           <p>
             <a
-              href="https://maps.app.goo.gl/apwTFCnBGXFgaGKt5?g_st=aw"
+              href="https://www.google.com/maps/place/DM+TECHNOLOGIES/@13.022067,77.5046175,808m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bae3d002bf0642b:0x35ebb0b2212893b7!8m2!3d13.0220618!4d77.5071924!16s%2Fg%2F11yt00_4nh?authuser=0&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener"
             >
               <i class="fas fa-map-marker-alt"></i>
-              Plot V-60, 5 Main Road, KSSIDC Industrial Area, Peenya 2nd Stage,
-              Bengaluru – 560058
+              NO:450, 12 CROSS, PEENYA INDUSTRIAL AREA, PEENYA 4 PHASE,
+              BENGALURU-560058
             </a>
           </p>
 
@@ -829,7 +995,7 @@
               <i class="fas fa-phone-alt"></i> +91 82962 23386
             </a>
           </p>
-           <p>
+          <p>
             <a href="tel:+917026707866">
               <i class="fas fa-phone-alt"></i> +91 7026707866
             </a>
@@ -997,6 +1163,19 @@
       });
 
       // ...existing code...
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(function () {
+            preloader.classList.add("is-hidden");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 600);
+          }, 500);
+        }
+      });
     </script>
   </body>
 </html>

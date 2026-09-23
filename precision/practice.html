@@ -29,6 +29,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        padding-bottom:10px ;
       }
       .box {
         display: flex;
@@ -36,20 +37,35 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        background-color:grey ;
+        background-color:rgb(190, 190, 190) ;
         padding: 20px;
         border-radius: 15px;
-        width: 350px;
+        width: 400px;
         height: 400px;
+        padding-bottom: 0;
+        border: 1px solid black;
+
+
       }
       .box img {
         height: 150px;
       }
-      .box input,button{
+      .box input{
+        background: #f8f8f8;
+        padding: 3px;
+        padding-left: 1px;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+      }
+      .box button{
+        background: #000;
+        color: #D7DF23;
         padding: 3px;
         border-radius: 5px;
         border: none;
-        width: 150px;
+        width: 200px;
+
       }
 
     </style>
@@ -68,23 +84,27 @@
             alt=""
           />
         </div>
-        <input type="text" placeholder="enter ur number" />
+        <input type="text" placeholder="enter Km" />
         <button>submit</button>
       </div>
       <div class="box">
         <div>
          <img src="https://png.pngtree.com/png-vector/20240905/ourmid/pngtree-black-electric-car-illustration-clipart-png-image_13757062.png" alt="">
         </div>
-        <input type="text" placeholder="enter ur number" />
+        <input type="text" placeholder="enter Km" />
         <button>submit</button>
       </div>
       <div class="box">
         <div>
           <img src="https://png.pngtree.com/png-vector/20251017/ourmid/pngtree-yellow-auto-rickshaw-isolated-on-transparent-background-png-image_17761844.webp" alt="">
         </div>
-        <input type="text" placeholder="enter ur number" />
+        <input type="text" placeholder="enter Km" />
         <button>submit</button>
       </div>
     </div>
+
+    <style>
+      
+    </style>
   </body>
 </html>

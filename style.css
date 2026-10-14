@@ -443,7 +443,7 @@ nav a.active {
   background: rgba(0, 0, 0, 0.25);
 }
 
-.hero-video iframe {
+.hero-video video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -452,6 +452,7 @@ nav a.active {
   height: 56.25vw;
   min-height: 100%;
   transform: translate(-50%, -50%);
+  object-fit: cover;
   border: 0;
   pointer-events: none;
 }

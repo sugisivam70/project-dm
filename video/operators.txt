@@ -1,0 +1,19 @@
+1) arithmetic opertors
++ - * / %
+
+2) logical operators
+AND &&
+OR ||
+NOT !
+
+3) Assigment operators
+= += -= *= /= 
+
+4) relational opertors
+< > <= >= != == ===
+
+5) type of operator
+    console.log(typeof "hello")
+
+6) conditional operator
+    CONDITION ? TRUE : FALSE
